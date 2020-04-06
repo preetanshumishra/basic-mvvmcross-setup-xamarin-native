@@ -1,11 +1,13 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using mvvmcrossnative.Core.ViewModels;
 
 namespace mvvmccrossnative.Droid
 {
-    [Activity(Label = "mvvmccrossnative", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class FirstActivity : Activity
+    [Activity(Label = "MvvmCrossNative", MainLauncher = true, Icon = "@mipmap/icon")]
+    public class FirstActivity : MvxAppCompatActivity<FirstViewModel>
     {
         int count = 1;
 
@@ -13,13 +15,9 @@ namespace mvvmccrossnative.Droid
         {
             base.OnCreate(savedInstanceState);
 
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.FirstView);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
             Button button = FindViewById<Button>(Resource.Id.myButton);
-
             button.Click += delegate { button.Text = $"{count++} clicks!"; };
         }
     }
