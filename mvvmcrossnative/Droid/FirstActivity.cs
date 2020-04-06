@@ -3,10 +3,12 @@ using Android.Widget;
 using Android.OS;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using mvvmcrossnative.Core.ViewModels;
+using MvvmCross.ViewModels;
 
 namespace mvvmccrossnative.Droid
 {
-    [Activity(Label = "MvvmCrossNative", MainLauncher = true, Icon = "@mipmap/icon")]
+    [MvxViewFor(typeof(FirstViewModel))]
+    [Activity(Label = "MvvmCrossNative", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/Theme.AppCompat")]
     public class FirstActivity : MvxAppCompatActivity<FirstViewModel>
     {
         int count = 1;

@@ -1,4 +1,5 @@
 ﻿using MvvmCross;
+using MvvmCross.IoC;
 using MvvmCross.ViewModels;
 using mvvmcrossnative.Core.Services.Contracts;
 using mvvmcrossnative.Core.Services.Implementations;
@@ -21,8 +22,8 @@ namespace mvvmcrossnative.Core
         private void RegisterServices()
         {
             // Register all your services here.
-            Mvx.IoCProvider.RegisterType<INavigationService, NavigationService>();
-            Mvx.IoCProvider.RegisterType<ISampleService, SampleService>();
+            Mvx.IoCProvider.RegisterSingleton<INavigationService>(() => new NavigationService(null, Mvx.IoCProvider.Resolve<IMvxViewModelLoader>()));
+            Mvx.IoCProvider.LazyConstructAndRegisterSingleton<ISampleService, SampleService>();
         }
     }
 }

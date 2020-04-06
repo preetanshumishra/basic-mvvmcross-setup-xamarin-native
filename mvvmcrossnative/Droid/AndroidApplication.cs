@@ -1,14 +1,17 @@
 ﻿using System;
+using Android.App;
 using Android.Runtime;
-using MvvmCross.Platforms.Android.Views;
+using MvvmCross.Droid.Support.V7.AppCompat;
 using mvvmcrossnative.Core;
 
 namespace mvvmccrossnative.Droid
 {
-    public class AndroidApplication : MvxAndroidApplication<AndroidSetup, App>
+    [Application]
+    public class AndroidApplication : MvxAppCompatApplication<AndroidSetup, App>
     {
         public AndroidApplication(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
         {
+
         }
     }
 }

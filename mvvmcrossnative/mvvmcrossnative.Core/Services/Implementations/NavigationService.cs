@@ -8,6 +8,7 @@ namespace mvvmcrossnative.Core.Services.Implementations
     {
         public NavigationService(IMvxNavigationCache navigationCache, IMvxViewModelLoader viewModelLoader) : base(navigationCache, viewModelLoader)
         {
+
         }
     }
 }

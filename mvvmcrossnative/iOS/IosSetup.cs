@@ -7,9 +7,9 @@ namespace mvvmccrossnative.iOS
 {
     public class IosSetup : MvxIosSetup<App>
     {
-        //protected override IMvxApplication CreateApp()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        protected override IMvxApplication CreateApp()
+        {
+            return new App();
+        }
     }
 }

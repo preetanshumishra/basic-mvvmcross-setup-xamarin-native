@@ -1,15 +1,14 @@
-﻿using System;
-using MvvmCross.Platforms.Android.Core;
+﻿using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.ViewModels;
 using mvvmcrossnative.Core;
 
 namespace mvvmccrossnative.Droid
 {
-    public class AndroidSetup : MvxAndroidSetup<App>
+    public class AndroidSetup : MvxAppCompatSetup<App>
     {
-        //protected override IMvxApplication CreateApp()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        protected override IMvxApplication CreateApp()
+        {
+            return new App();
+        }
     }
 }
