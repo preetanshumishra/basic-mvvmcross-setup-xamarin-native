@@ -160,7 +160,6 @@
       <HintPath>..\packages\MvvmCross.Droid.Support.V7.AppCompat.6.4.2\lib\monoandroid90\MvvmCross.Droid.Support.V7.AppCompat.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android.Export" />
-    <Reference Include="Java.Interop" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FirstActivity.cs" />
@@ -173,7 +172,6 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\FirstView.axml" />
