@@ -1,5 +1,4 @@
-﻿using System;
-using mvvmcrossnative.Core.Services.Contracts;
+﻿using mvvmcrossnative.Core.Services.Contracts;
 
 namespace mvvmcrossnative.Core.Services.Implementations
 {

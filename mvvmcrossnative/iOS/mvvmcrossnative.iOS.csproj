@@ -79,9 +79,13 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="MvvmCross">
-      <HintPath>..\packages\MvvmCross.6.4.2\lib\xamarinios10\MvvmCross.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.8.0.2\lib\xamarinios10\MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK-1.0" />
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common.dll" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
